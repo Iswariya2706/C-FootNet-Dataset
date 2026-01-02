@@ -55,7 +55,7 @@ To ensure realistic multivariate distributions and inter-variable dependencies (
 
 ### **Target Variable**
 *   `carbon_emission_total_kgCO2e`: Total calculated footprint based on:
-    Total Emission = Σ (Activity Level × Emission Factor (DEFRA Factor)
+    Total Emission = Σ (Activity Level × Emission Factor (DEFRA Based))
 
 ## Citation
 If you use this dataset or code in your research, please cite:
