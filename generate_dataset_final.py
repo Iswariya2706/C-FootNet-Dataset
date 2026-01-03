@@ -21,9 +21,7 @@ warnings.filterwarnings('ignore')
 RANDOM_SEED = 42
 N_SAMPLES = 5000
 
-# -----------------------------------------------------------------------------
 # 1. EMISSION FACTOR REGISTRY (Official DEFRA 2025 Standards)
-# -----------------------------------------------------------------------------
 # These factors represent kg CO2e per unit (km, kWh, or kg)
 DEFRA_2025_FACTORS = {
     'transportation': {
@@ -58,9 +56,9 @@ DEFRA_2025_FACTORS = {
     }
 }
 
-# -----------------------------------------------------------------------------
+
 # 2. CORE SYNTHESIS ENGINE (Gaussian Copula)
-# -----------------------------------------------------------------------------
+
 def initialize_copula(n_features):
     """
     Constructs a covariance matrix to model inter-domain dependencies.
@@ -118,9 +116,9 @@ def generate_marginals(df):
 
     return df
 
-# -----------------------------------------------------------------------------
+
 # 3. DOMAIN-LEVEL POST-PROCESSING
-# -----------------------------------------------------------------------------
+
 def apply_domain_logic(df):
     """
     Applies deterministic DEFRA lookups and calculates cross-domain emissions.
@@ -175,9 +173,9 @@ def apply_domain_logic(df):
 
     return df
 
-# -----------------------------------------------------------------------------
+
 # 4. FINAL CALCULATION & EXPORT
-# -----------------------------------------------------------------------------
+
 def calculate_carbon_footprint(df):
     """
     Computes the total household carbon footprint based on Activity * Factor.
@@ -229,3 +227,4 @@ def run_synthesis():
 
 if __name__ == "__main__":
     run_synthesis()
+
